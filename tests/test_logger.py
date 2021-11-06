@@ -5,7 +5,6 @@ from typing import Any
 
 import httpx
 import pytest
-from asgiref.typing import ASGI3Application
 from asgiref.typing import ASGIReceiveCallable as Receive
 from asgiref.typing import ASGISendCallable as Send
 from asgiref.typing import Scope
