@@ -10,7 +10,7 @@ from typing import TypedDict
 from asgiref.typing import ASGI3Application, ASGIReceiveCallable, ASGISendCallable
 from asgiref.typing import ASGISendEvent, HTTPScope
 
-from uvicorn_logger.utils import get_client_addr, get_path_with_query_string
+from .utils import get_client_addr, get_path_with_query_string
 
 
 class AccessInfo(TypedDict, total=False):
@@ -47,7 +47,7 @@ class AccessLoggerMiddleware:
         if scope["type"] != "http":
             return await self.app(scope, receive, send)
 
-        info = AccessInfo()
+        info = AccessInfo(response={})
 
         async def inner_send(message: ASGISendEvent) -> None:
             if message["type"] == "http.response.start":
@@ -58,7 +58,7 @@ class AccessLoggerMiddleware:
             info["start_time"] = time.time()
             await self.app(scope, receive, inner_send)
         except Exception as exc:
-            info["status"] = 500
+            info["response"]["status"] = 500
             raise exc
         finally:
             info["end_time"] = time.time()

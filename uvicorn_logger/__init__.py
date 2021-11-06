@@ -1,1 +1,1 @@
-from uvicorn_logger.middleware import AccessLoggerMiddleware
+from .middleware import AccessLoggerMiddleware
