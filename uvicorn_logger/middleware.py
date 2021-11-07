@@ -39,13 +39,12 @@ class AccessLoggerMiddleware:
             self.logger.addHandler(handler)
         else:
             self.logger = logger
-        logging.getLogger("uvicorn.access").handlers = []
 
     async def __call__(
         self, scope: HTTPScope, receive: ASGIReceiveCallable, send: ASGISendCallable
     ) -> None:
         if scope["type"] != "http":
-            return await self.app(scope, receive, send)
+            return await self.app(scope, receive, send)  # pragma: no cover
 
         info = AccessInfo(response={})
 
