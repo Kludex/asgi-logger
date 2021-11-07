@@ -1,25 +1,25 @@
 <h1 align="center">
-    <strong>uvicorn-logger</strong>
+    <strong>asgi-logger</strong>
 </h1>
 <p align="center">
-    <a href="https://github.com/Kludex/uvicorn-logger" target="_blank">
-        <img src="https://img.shields.io/github/last-commit/Kludex/uvicorn-logger" alt="Latest Commit">
+    <a href="https://github.com/Kludex/asgi-logger" target="_blank">
+        <img src="https://img.shields.io/github/last-commit/Kludex/asgi-logger" alt="Latest Commit">
     </a>
-        <img src="https://img.shields.io/github/workflow/status/Kludex/uvicorn-logger/Test">
-        <img src="https://img.shields.io/codecov/c/github/Kludex/uvicorn-logger">
+        <img src="https://img.shields.io/github/workflow/status/Kludex/asgi-logger/Test">
+        <img src="https://img.shields.io/codecov/c/github/Kludex/asgi-logger">
     <br />
-    <a href="https://pypi.org/project/uvicorn-logger" target="_blank">
-        <img src="https://img.shields.io/pypi/v/uvicorn-logger" alt="Package version">
+    <a href="https://pypi.org/project/asgi-logger" target="_blank">
+        <img src="https://img.shields.io/pypi/v/asgi-logger" alt="Package version">
     </a>
-    <img src="https://img.shields.io/pypi/pyversions/uvicorn-logger">
-    <img src="https://img.shields.io/github/license/Kludex/uvicorn-logger">
+    <img src="https://img.shields.io/pypi/pyversions/asgi-logger">
+    <img src="https://img.shields.io/github/license/Kludex/asgi-logger">
 </p>
 
 
 ## Installation
 
 ``` bash
-pip install uvicorn-logger
+pip install asgi-logger
 ```
 
 ## License

@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "uvicorn-logger"
+name = "asgi-logger"
 version = "0.1.0"
 description = "Middleware based uvicorn access logger! :tada:"
 authors = ["Marcelo Trylesinski <marcelotryle@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/Kludex/uvicorn-logger"
-include = ["uvicorn_logger/py.typed"]
+repository = "https://github.com/Kludex/asgi-logger"
+include = ["asgi_logger/py.typed"]
 
 classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",

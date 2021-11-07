@@ -14,24 +14,24 @@ install:  ## Install package
 .PHONY: lint
 lint:  ## Linter the code.
 	@echo "🚨 Linting code"
-	poetry run isort uvicorn_logger tests --check
-	poetry run flake8 uvicorn_logger tests
-	poetry run mypy uvicorn_logger
-	poetry run black uvicorn_logger tests --check --diff
+	poetry run isort asgi_logger tests --check
+	poetry run flake8 asgi_logger tests
+	poetry run mypy asgi_logger
+	poetry run black asgi_logger tests --check --diff
 
 
 .PHONY: format
 format:
 	@echo "🎨 Formatting code"
-	poetry run isort uvicorn_logger tests
-	poetry run autoflake --remove-all-unused-imports --recursive --remove-unused-variables --in-place uvicorn_logger tests --exclude=__init__.py
-	poetry run black uvicorn_logger tests
+	poetry run isort asgi_logger tests
+	poetry run autoflake --remove-all-unused-imports --recursive --remove-unused-variables --in-place asgi_logger tests --exclude=__init__.py
+	poetry run black asgi_logger tests
 
 
 .PHONY: test
 test:  ## Test your code.
 	@echo "🍜 Running pytest"
-	poetry run pytest -vv tests/ --cov=uvicorn_logger --cov-report=term-missing:skip-covered --cov-report=xml --cov-fail-under 100
+	poetry run pytest -vv tests/ --cov=asgi_logger --cov-report=term-missing:skip-covered --cov-report=xml --cov-fail-under 100
 
 
 .PHONY: publish
