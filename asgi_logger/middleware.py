@@ -1,14 +1,13 @@
-from __future__ import annotations
-
 import http
 import logging
 import os
 import sys
 import time
-from typing import TypedDict
+from typing import Optional
 
 from asgiref.typing import ASGI3Application, ASGIReceiveCallable, ASGISendCallable
 from asgiref.typing import ASGISendEvent, HTTPScope
+from typing_extensions import TypedDict
 
 from .utils import get_client_addr, get_path_with_query_string
 
@@ -25,8 +24,8 @@ class AccessLoggerMiddleware:
     def __init__(
         self,
         app: ASGI3Application,
-        format: str | None = None,
-        logger: logging.Logger | None = None,
+        format: Optional[str] = None,
+        logger: Optional[logging.Logger] = None,
     ) -> None:
         self.app = app
         self.format = format or self.DEFAULT_FORMAT
