@@ -37,6 +37,7 @@ Below you can see an example with FastAPI, but you can use it with any other ASG
 
 ```python
 from fastapi import FastAPI
+from fastapi.middleware import Middleware
 from asgi_logger import AccessLoggerMiddleware
 
 app = FastAPI(middleware=[Middleware(AccessLoggerMiddleware)])
