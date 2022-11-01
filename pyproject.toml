@@ -36,7 +36,7 @@ pytest-cov = "^2.10.1"
 mypy = "^0.910"
 uvicorn = "^0.15.0"
 httpx = "^0.20.0"
-anyio = "^3.3.4"
+anyio = "^3.6.2"
 trio = "^0.19.0"
 pytest-sugar = "^0.9.4"
 
