@@ -7,7 +7,7 @@ help: ## Show this help
 install:  ## Install package
 	@echo "🏗️ Install package"
 	python -m pip install --upgrade pip
-	python -m pip install --upgrade poetry==1.2.0a2
+	python -m pip install --upgrade poetry==1.3.0
 	poetry install
 
 
