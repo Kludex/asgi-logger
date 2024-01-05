@@ -59,6 +59,9 @@ class AccessLoggerMiddleware:
         except Exception as exc:
             info["response"]["status"] = 500
             raise exc
+        except BaseException as exc:
+            info["response"]["status"] = None
+            raise exc
         finally:
             info["end_time"] = time.time()
             self.log(scope, info)
